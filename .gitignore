@@ -1,4 +1,5 @@
 .idea/
+apifunc.php
 vendor/
 packagist.bat
 # Logs

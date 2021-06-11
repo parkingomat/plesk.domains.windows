@@ -1,5 +1,5 @@
 {
-  "name": "parkingomat/plesk.domains.php",
+  "name": "parkingomat/plesk.index.php",
   "description": "Plesk api client to get all domains",
   "authors": [
     {
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "parkingomat\\PleskDomainsPhp\\": "src/"
+      "parkingomat\\PleskDomainsPhp\\": "php/"
     }
   },
   "autoload-dev": {
@@ -29,7 +29,7 @@
     }
   },
   "scripts": {
-    "start": "php -S 0.0.0.0:8080 -t src"
+    "start": "php -S 0.0.0.0:8080 -t php"
   },
   "config": {
     "process-timeout": 0
