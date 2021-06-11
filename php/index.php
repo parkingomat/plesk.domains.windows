@@ -4,9 +4,6 @@ namespace parkingomat\PleskDomainsPhp;
 
 require('../vendor/autoload.php');
 
-include('header_json.php');
-include('getDomainsFromHost.php');
-
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
     header_json(['GET' => 'empty']);
 }
@@ -14,15 +11,18 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 use letjson\LetJson;
 
 try {
-
-// how to load composer packages?
+    // how to load composer packages?
     apifunc([
         'https://php.letjson.com/let_json.php',
         'https://php.defjson.com/def_json.php',
         'https://php.eachfunc.com/each_func.php',
         'https://domain.phpfunc.com/get_domain_by_url.php',
         'https://domain.phpfunc.com/clean_url.php',
-        'https://domain.phpfunc.com/clean_url_multiline.php',
+        'https://php.parkingomat.com/client.php',
+        'https://php.parkingomat.com/getDomains.php',
+        'https://php.parkingomat.com/getDomainsFromHost.php',
+        'https://php.parkingomat.com/header_json.php',
+        'https://php.parkingomat.com/usernames.php.php',
     ], function () {
 
     $objs = new LetJson("../../plesk.json");

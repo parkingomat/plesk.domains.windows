@@ -1,8 +1,10 @@
 @ECHO OFF
-echo I will install NPM packages on this project ...
-WHERE npm
+echo I will install PHP packages on this project over composer ...
+WHERE php
 IF %ERRORLEVEL% NEQ 0 (
-    echo npm is not installed on this system!
+    echo PHP is not installed on this system!
+    echo try to install PHP over command:
+    echo .apitee\\install.bat
 ) else (
-    npm install
+    php composer.phar install
 )
