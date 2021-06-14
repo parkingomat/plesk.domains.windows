@@ -1,5 +1,4 @@
-<?php
-
+<?php // https://www.webstream.dev
 #1 Install apifunc loader:  .apifunc\\install.bat
 #2 Start project:           .apiexec\\start.bat
 #3 Open in Browser:         http://localhost:8080/api.php
@@ -16,16 +15,13 @@ try {
     apifunc([
         'https://php.letjson.com/let_json.php',
         'https://php.defjson.com/def_json.php',
-        'https://php.eachfunc.com/each_func.php',
-        'https://domain.phpfunc.com/get_domain_by_url.php',
-        'https://domain.phpfunc.com/clean_url.php',
         'https://php.parkingomat.com/getDomainsFromHost.php',
         'https://php.parkingomat.com/header_json.php',
     ], function () {
 
         if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
             header_json([
-                'message' => 'The Request is not GET METHOD',
+                'message' => 'The Request should use GET method',
                 'error' => true
             ]);
         }
