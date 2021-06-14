@@ -1,13 +1,14 @@
 <?php
 
-// Install apifunc loader: .apifunc\\install.bat
+#1 Install apifunc loader:  .apifunc\\install.bat
+#2 Start project:           .apiexec\\start.bat
+#3 Open in Browser:         http://localhost:8080/api.php
 
 // Load composer packages
 require('../vendor/autoload.php');
 
 // load files local from .apifunc folder and remote from https://*
 require('../.apifunc/apifunc.php');
-
 
 use letjson\LetJson;
 
