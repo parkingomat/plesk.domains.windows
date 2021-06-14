@@ -13,7 +13,6 @@ Use the parkingomat.plesk module on windows environment
 ### install
     .apifunc\\install.bat
 
-
 ### start
     .apiexec\\start.bat
 

@@ -1,13 +1,17 @@
 <?php
 
+// Install apifunc loader: .apifunc\\install.bat
+
+// Load composer packages
 require('../vendor/autoload.php');
+
+// load files local from .apifunc folder and remote from https://*
 require('../.apifunc/apifunc.php');
 
 
 use letjson\LetJson;
 
 try {
-    // how to load composer packages?
     apifunc([
         'https://php.letjson.com/let_json.php',
         'https://php.defjson.com/def_json.php',
@@ -26,20 +30,17 @@ try {
         }
 
         $objs = new LetJson("../../plesk.json");
-//        header_json((array) $objs);
 
         if (empty($_GET['hostname'])) {
             $data = [];
             $objs->each(function ($obj) {
                 global $data;
                 $data[] = getDomainsFromHost($obj, []);
-//                var_dump($data);
             });
             global $data;
             header_json($data);
 
         } else {
-
             $objs->each(function ($obj) {
                 if ($obj->host === $_GET['hostname']) {
                     $data = getDomainsFromHost($obj, []);
@@ -51,7 +52,7 @@ try {
     }, '../.apifunc');
 
 } catch (Exception $e) {
-    // Set HTTP response status code to: 500 - Internal Server Error
+    // Set HTTP response status code to: 500 or show Message about Internal Server Error
     header_json([
         'message' => $e->getMessage(),
         'error' => true

@@ -1,25 +1,27 @@
 <?php
 
-// form for search and show list
 require('../.apifunc/apifunc.php');
 
 try {
-    // how to load composer packages?
-//    let_html([
+    //TODO: how to load composer packages?
+
     apifunc([
         'https://php.parkingomat.com/header.php',
-        'https://php.parkingomat.com/post.php',
-        'https://php.parkingomat.com/form.php',
+//        'https://php.parkingomat.com/post.php',
+//        'https://php.parkingomat.com/form.php',
         'https://php.parkingomat.com/footer.php',
+        'https://php.letxml.com/let_xml.php',
     ], function () {
 
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             echo "GET: ";
             var_dump($_GET);
+            echo let_xml(['https://php.parkingomat.com/form.php']);
         }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "POST: ";
             var_dump($_POST);
+            echo let_xml(['https://php.parkingomat.com/post.php']);
         }
     }, '../.apifunc');
 
