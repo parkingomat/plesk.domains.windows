@@ -2,35 +2,34 @@
 Use the parkingomat.plesk module on windows environment
 
 
-TODO:
-+ create apicra and composer.json shortcuts
+## TODO:
 
 # First Steps
 
 ## composer
 
-+ "download": "curl https://php.apifunc.com/apifunc.php --output .apifunc/apifunc.php"
+### "download": "curl https://php.apifunc.com/apifunc.php --output .apifunc/apifunc.php"
 ```bash
 php composer.phar download
 ```
 
-+ "delete": "rm -rf .apifunc/*.php"
+### "delete": "rm -rf .apifunc/*.php"
 ```bash 
 php composer.phar delete
 ```
 
-+ "build": "php composer.phar install"
+### "build": "php composer.phar install"
 ```bash
 php composer.phar build
 ```
 
 
-+ "start": "php -S 0.0.0.0:8080 -t php"
+### "start": "php -S 0.0.0.0:8080 -t php"
 ```bash
 php composer.phar start
 ```
 
-+ "stop": ""
+### "stop": ""
 ```bash
 php composer.phar stop
 ```
