@@ -7,21 +7,22 @@ try {
 
     apifunc([
         'https://php.parkingomat.com/header.php',
-//        'https://php.parkingomat.com/post.php',
+        'https://php.parkingomat.com/post.php',
 //        'https://php.parkingomat.com/form.php',
         'https://php.parkingomat.com/footer.php',
-        'https://php.letxml.com/let_xml.php',
+//        'https://php.letxml.com/let_xml.php',
+        'https://php.lettxt.com/let_txt.php',
     ], function () {
 
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             echo "GET: ";
             var_dump($_GET);
-            echo let_xml(['https://php.parkingomat.com/form.php']);
+            echo let_txt(['https://php.parkingomat.com/form.php1']);
         }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "POST: ";
             var_dump($_POST);
-            echo let_xml(['https://php.parkingomat.com/post.php']);
+            echo let_txt(['https://php.parkingomat.com/post.php']);
         }
     }, '../.apifunc');
 

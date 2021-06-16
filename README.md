@@ -11,7 +11,8 @@ Use the parkingomat.plesk module on windows environment
     .apibuild\\install.bat
 
 ### install
-    .apifunc\\install.bat
+    .apifunc\\download.bat
+    .apifunc\\delete.bat
 
 ### start
     .apiexec\\start.bat
