@@ -29,7 +29,11 @@
     }
   },
   "scripts": {
-    "start": "php -S 0.0.0.0:8080 -t php"
+    "download": "php -S 0.0.0.0:8080 -t php",
+    "delete": "rm -rf .apifunc/*.php",
+    "build": "php composer.phar install",
+    "start": "php -S 0.0.0.0:8080 -t php",
+    "stop": ""
   },
   "config": {
     "process-timeout": 0

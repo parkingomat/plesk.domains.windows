@@ -3,6 +3,8 @@
 #2 Start project:           .apiexec\\start.bat
 #3 Open in Browser:         http://localhost:8080/api.php
 
+error_reporting(E_ERROR | E_PARSE);
+
 // Load composer packages
 require('../vendor/autoload.php');
 

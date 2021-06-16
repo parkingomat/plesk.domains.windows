@@ -1,5 +1,6 @@
 <?php
 
+error_reporting(E_ERROR | E_PARSE);
 require('../.apifunc/apifunc.php');
 
 try {
@@ -8,7 +9,7 @@ try {
     apifunc([
         'https://php.parkingomat.com/header.php',
         'https://php.parkingomat.com/post.php',
-//        'https://php.parkingomat.com/form.php',
+        'https://php.parkingomat.com/form.php',
         'https://php.parkingomat.com/footer.php',
 //        'https://php.letxml.com/let_xml.php',
         'https://php.lettxt.com/let_txt.php',
@@ -17,7 +18,7 @@ try {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             echo "GET: ";
             var_dump($_GET);
-            echo let_txt(['https://php.parkingomat.com/form.php1']);
+            echo let_txt(['https://php.parkingomat.com/form.php']);
         }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "POST: ";
