@@ -9,37 +9,31 @@ TODO:
 
 ## composer
 
-+ "download": "curl https://php.apifunc.com/apifunc.php --output .apifunc/apifunc.php",
++ "download": "curl https://php.apifunc.com/apifunc.php --output .apifunc/apifunc.php"
+```bash
+php composer.phar download
+```
 
-    
-    php composer.phar download
++ "delete": "rm -rf .apifunc/*.php"
+```bash 
+php composer.phar delete
+```
 
-
-+ "delete": "rm -rf .apifunc/*.php",
-
-
-    php composer.phar delete
-
-
-
-
-+ "build": "php composer.phar install",
-
-
-    php composer.phar build
++ "build": "php composer.phar install"
+```bash
+php composer.phar build
+```
 
 
-
-+ "start": "php -S 0.0.0.0:8080 -t php",
-
-  php composer.phar start
-
++ "start": "php -S 0.0.0.0:8080 -t php"
+```bash
+php composer.phar start
+```
 
 + "stop": ""
-
-
-    php composer.phar stop
-
+```bash
+php composer.phar stop
+```
 
 ## on windows
 
